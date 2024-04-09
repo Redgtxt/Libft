@@ -8,12 +8,12 @@ char *ft_strrchr(const char *str, int c)
 
         while(i > 0)
         {
-            if(str[i] == c)
-            {   
-            return  (char *)&str[i];
-            }
+            if(str[i] == (unsigned char)c)
+                return  (char *)str + i;
           i--;
         }
+         if (str[i] == (unsigned char)c)
+            return (char *)str + i;
     return (NULL);
 }
 
