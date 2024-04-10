@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hguerrei <hguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/10 13:13:31 by hguerrei          #+#    #+#             */
+/*   Updated: 2024/04/10 13:13:31 by hguerrei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
@@ -15,13 +28,13 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     i = start;
     while(i  < len + start  && s[i] != '\0')
         i++;
-    
+
     substr = malloc((len + 1) * sizeof(char));
     if(!substr)
         return NULL;
-    
-    
- //i - start e amplitude para descobrir mos quantos caracteres vao ser copiados 
+
+
+ //i - start e amplitude para descobrir mos quantos caracteres vao ser copiados
     ft_strlcpy(substr,s + start,i - start + 1);
 
     return substr;

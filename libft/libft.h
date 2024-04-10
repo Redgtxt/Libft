@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hguerrei <hguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/10 13:14:58 by hguerrei          #+#    #+#             */
+/*   Updated: 2024/04/10 13:14:58 by hguerrei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
 #ifndef LIBFT_H
 #define LIBFT_H
 
@@ -57,4 +71,4 @@ void ft_lstdelone(t_list *lst,void (*del)(void*));
 void ft_lstclear(t_list **lst, void(*del)(void *));
 void ft_lstiter(t_list *lst, void (*f)(void *));
 t_list *ft_lstmap(t_list *lst,void *(*f)(void *),void (*del)(void *));
-#endif 
+#endif

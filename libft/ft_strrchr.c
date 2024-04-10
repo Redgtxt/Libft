@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hguerrei <hguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/10 13:13:20 by hguerrei          #+#    #+#             */
+/*   Updated: 2024/04/10 13:13:20 by hguerrei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
 
 char *ft_strrchr(const char *str, int c)
@@ -25,7 +38,7 @@ int main(void)
     char *ptr;
     char *ptrTrue;
 
-   
+
     ptr = ft_strrchr(str, 'l');
      ptrTrue = strrchr(str, 'l');
 

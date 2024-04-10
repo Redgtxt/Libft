@@ -1,3 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hguerrei <hguerrei@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/10 13:13:25 by hguerrei          #+#    #+#             */
+/*   Updated: 2024/04/10 13:13:25 by hguerrei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
 #include "libft.h"
 char *ft_strtrim(char const *s1,char const *set)
 {
@@ -11,7 +24,7 @@ char *ft_strtrim(char const *s1,char const *set)
     end = ft_strlen(s1) - 1;
 
     start = 0;
-    //ft_strchr(set,s1[start]) procura a primeira ocorrência de um caractere específico 
+    //ft_strchr(set,s1[start]) procura a primeira ocorrência de um caractere específico
     while(ft_strchr(set,s1[start]) && start <= end)
         start++;
 
