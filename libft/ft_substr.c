@@ -15,29 +15,21 @@
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    size_t i;
-    char *substr;
+   char	*substr;
+	size_t	size;
 
-    if(!s)
-        return NULL;
-
-    i = ft_strlen(s);
-    if (start >= i) // if start is greater than or equal to the length of the string
-        return ft_strdup(""); // return an empty string
-
-    i = start;
-    while(i  < len + start  && s[i] != '\0')
-        i++;
-
-    substr = malloc((len + 1) * sizeof(char));
-    if(!substr)
-        return NULL;
-
-
- //i - start e amplitude para descobrir mos quantos caracteres vao ser copiados
-    ft_strlcpy(substr,s + start,i - start + 1);
-
-    return substr;
+	if (!s)
+		return (NULL);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	size = ft_strlen(s + start);
+	if (size < len)
+		len = size;
+	substr = malloc((len + 1) * sizeof(char));
+	if (!substr)
+		return (NULL);
+	ft_strlcpy(substr, s + start, len + 1);
+	return (substr);
 }
 
 /*

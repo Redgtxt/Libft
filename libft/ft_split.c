@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
 size_t count_tokens(char const *s, char delimiter) {
@@ -65,9 +64,6 @@ int fill(char **tokens_v, char const *s, char delimiter) {
         if (len) {
             if (safe_malloc(tokens_v, j, len + 1))
                 return 1;
-            tokens_v[j] = malloc(len + 1);
-            if (tokens_v[j] == NULL)
-                return 1;
             ft_strlcpy(tokens_v[j], &s[i - len], len + 1);
             j++;
         }
@@ -95,8 +91,8 @@ char **ft_split(char const *s, char c) {
 
     // Cpy all the stings in the correct order
     if (fill(tokens_v, s, c)) {
+        free(tokens_v);
         return NULL;
     }
     return tokens_v;
 }
-

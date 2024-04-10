@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char * ft_strdup(const char *str1)
+char *ft_strdup(const char *str1)
 {
     char *new;
     size_t lenght;
@@ -36,11 +35,3 @@ char * ft_strdup(const char *str1)
     return new;
 }
 
-/*
-#include <stdio.h>
-int main(void)
-{
-    char texto[] = "Bom dia";
-    printf("%s",ft_strdup(texto));
-}
-*/
