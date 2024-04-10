@@ -35,34 +35,42 @@ static int ft_len(int n)
 // returnar (count);
 
 char *ft_itoa(int n) // n = -123
-{
-    char    *ptr;
+{ //E unsigned int para nao estourar o buffer com o numero minimo do INT
+     char    *ptr;
     int     len;
+    unsigned int num;
 
-    len = ft_len(n); // count = 4
+    len = ft_len(n);
     ptr = malloc(len + 1);
     if(ptr == NULL)
         return (NULL);
     ptr[len] = '\0';
     if(n == 0)
+    {
         ptr[0] = '0';
+        return ptr;
+    }
     else if (n < 0)
     {
         ptr[0] = '-';
-        n *= -1;
+        num = (unsigned int)(n * -1);
     }
-    while(n)
+    else
+        num = (unsigned int)n;
+    while(num)
     {
-        ptr[--len] = (n % 10) + 48;
-        n /= 10;
+        ptr[--len] = (num % 10) + 48;
+        num /= 10;
     }
     return (ptr);
 }
 
+/*
 int main()
 {
     char *teste = ft_itoa(-123445);
     printf("%s\n", teste);
     printf("%c\n", teste[2]);
 }
+*/
 

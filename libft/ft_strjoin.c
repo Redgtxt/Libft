@@ -27,7 +27,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     return newStr;
 
 }
-
+/*
 int main(void)
 {
     char s1[] = "Bom    ";
@@ -37,3 +37,4 @@ int main(void)
     printf("%s",juntos);
 }
 
+*/
