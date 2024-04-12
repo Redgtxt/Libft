@@ -2,27 +2,30 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hguerrei <hguerrei@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+
+	+:+     */
+/*   By: hguerrei <hguerrei@student.42.fr>          +#+  +:+
+	+#+        */
+/*                                                +#+#+#+#+#+
+	+#+           */
 /*   Created: 2024/04/10 13:10:05 by hguerrei          #+#    #+#             */
 /*   Updated: 2024/04/10 13:10:05 by hguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst,t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
- t_list *temp;
+	t_list	*temp;
 
-    temp = ft_lstlast(*lst);
-    //Se e nulo(esta vazia)
-    if(!temp)
-    {
-        *lst = new;
-    }else{
-        temp ->next = new;
-    }
+	temp = ft_lstlast(*lst);
+	if (!temp)
+	{
+		*lst = new;
+	}
+	else
+	{
+		temp->next = new;
+	}
 }

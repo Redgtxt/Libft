@@ -2,32 +2,34 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hguerrei <hguerrei@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+
+	+:+     */
+/*   By: hguerrei <hguerrei@student.42.fr>          +#+  +:+
+	+#+        */
+/*                                                +#+#+#+#+#+
+	+#+           */
 /*   Created: 2024/04/10 13:09:45 by hguerrei          #+#    #+#             */
 /*   Updated: 2024/04/10 13:09:45 by hguerrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-     if((c >= '0' && c <= '9'))
-        return (1);
-     return 0;
+	if ((c >= '0' && c <= '9'))
+		return (1);
+	return (0);
 }
 
 /*
 #include <stdio.h>
-int main(void)
+
+int	main(void)
 {
-      printf("%d",ft_isdigit('A'));
-      printf("%d",ft_isdigit('z'));
-      printf("%d",ft_isdigit('0'));
-      printf("%d",ft_isdigit('#'));
+		printf("%d",ft_isdigit('A'));
+		printf("%d",ft_isdigit('z'));
+		printf("%d",ft_isdigit('0'));
+		printf("%d",ft_isdigit('#'));
 }
 */
