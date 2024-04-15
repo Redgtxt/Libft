@@ -15,7 +15,6 @@
 
 #include "libft.h"
 
-
 int	ft_atoi(const char *str)
 {
 	int	i;
@@ -40,12 +39,11 @@ int	ft_atoi(const char *str)
 	}
 	return (num * neg);
 }
-
-
+/*
 int	main(void)
 {
 	char *str = "-2";
-	printf(" True: %d\n",atoi(str));
-	printf(" Meu: %d\n",ft_atoi(str));
+	printf(" True: %d\n", atoi(str));
+	printf(" Meu: %d\n", ft_atoi(str));
 }
-
+*/
