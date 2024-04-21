@@ -23,8 +23,6 @@ CREATE = @ar -rc
 
 REMOVE = @rm -f
 
-
-
 all: $(NAME)
 
 $(NAME):	$(OBJ)
@@ -40,4 +38,4 @@ clean:
 fclean:	clean
 		$(REMOVE) $(NAME)
 
-re:		clean all
+re:	clean all

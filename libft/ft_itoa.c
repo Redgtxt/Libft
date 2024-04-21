@@ -15,19 +15,20 @@
 
 #include "libft.h"
 
-// n = 123 / 10 = 12 | count = 1;
-// n = 12 / 10 = 1 | count = 2;
-// n = 1 / 10 = 0 | count = 3;
-// returnar (count);
+/*
+ n = 123 / 10 = 12| count = 1;
+ n = 12 / 10 = 1| count = 2;
+ n = 1 / 10 = 0| count = 3;
+ returnar (count);
+*/
 
 static int	ft_len(int n)
 {
-	size_t count;
+	size_t	count;
 
 	count = 0;
 	if (n <= 0)
 		count++;
-
 	while (n != 0)
 	{
 		count++;
@@ -36,12 +37,24 @@ static int	ft_len(int n)
 	return (count);
 }
 
-// E unsigned int para nao estourar o buffer com o numero minimo do INT
-char	*ft_itoa(int n) // n = -123
+static void	fill_ptr(char *ptr, unsigned int num, int len)
 {
-	char *ptr;
-	int len;
-	unsigned int num;
+	while (num)
+	{
+		ptr[--len] = (num % 10) + 48;
+		num /= 10;
+	}
+}
+
+/*
+ E unsigned int para nao estourar o buffer
+  com o numero minimo do INT
+*/
+char	*ft_itoa(int n)
+{
+	char			*ptr;
+	int				len;
+	unsigned int	num;
 
 	len = ft_len(n);
 	ptr = malloc(len + 1);
@@ -60,10 +73,6 @@ char	*ft_itoa(int n) // n = -123
 	}
 	else
 		num = (unsigned int)n;
-	while (num)
-	{
-		ptr[--len] = (num % 10) + 48;
-		num /= 10;
-	}
+	fill_ptr(ptr, num, len);
 	return (ptr);
 }
