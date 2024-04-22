@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+/*	 Checks if a character is alphanumeric (letter or digit).*/
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) || ft_isdigit(c))
@@ -23,8 +24,6 @@ int	ft_isalnum(int c)
 }
 
 /*
-#include <stdio.h>
-
 int	main(void)
 {
 		printf("%d",ft_isalnum('A'));

@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+/*	Converts characters from lower case to upper case*/
 int	ft_toupper(int c)
 {
 	if ((c >= 'a' && c <= 'z'))
@@ -23,3 +24,10 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
+/*
+int main(void)
+{
+	char d = 'D';
+	printf(" %d\n", ft_toupper(d));
+}
+*/

@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+/*	Create a new string by modifying the string with a specified function.*/
 char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 {
 	unsigned int		i;

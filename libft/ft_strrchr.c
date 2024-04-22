@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+/*	Locate the character in the string (last occurrence)*/
 char	*ft_strrchr(const char *str, int c)
 {
 	size_t	i;
@@ -40,9 +41,8 @@ int	main(void)
 	char *ptr;
 	char *ptrTrue;
 
-
 	ptr = ft_strrchr(str, 'l');
-		ptrTrue = strrchr(str, 'l');
+	ptrTrue = strrchr(str, 'l');
 
 	printf("Meu: %s\n",ptr);
 	printf("True: %s\n",ptrTrue);

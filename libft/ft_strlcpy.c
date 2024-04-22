@@ -15,6 +15,8 @@
 
 #include "libft.h"
 
+/*Copies an n number of characters from
+the source string to the destination.*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;

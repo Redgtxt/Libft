@@ -15,6 +15,8 @@
 
 #include "libft.h"
 
+/*Searches for the first occurrence of a substring in a string,
+ limiting the search to a maximum number of characters.*/
 char	*ft_strnstr(const char *big, const char *small, size_t len)
 {
 	size_t	i;

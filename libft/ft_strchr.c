@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+/*Locate the character in the string (first occurrence)*/
 char	*ft_strchr(const char *str, int c)
 {
 	size_t	i;
@@ -36,12 +37,11 @@ char	*ft_strchr(const char *str, int c)
 }
 
 /*
-
 int	main(void) {
 	char str[] = "Hello, world!";
 	char *ptr;
 
-	ptr = ft_strchr(str, 'x');
+	ptr = ft_strchr(str, 'o');
 
 	printf("%s",ptr);
 	return (0);

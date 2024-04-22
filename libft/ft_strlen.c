@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+/*	Find the length of the string.*/
 size_t	ft_strlen(const char *str)
 {
 	int	i;

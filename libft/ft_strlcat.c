@@ -15,6 +15,8 @@
 
 #include "libft.h"
 
+/*Concatenates an n number of characters
+from the source string to the destination*/
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;

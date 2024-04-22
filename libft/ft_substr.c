@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+/*	Extract substring from a string*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
@@ -35,22 +36,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int main()
 {
     char str[] = "Cbum";
-    unsigned int start = 2; // Posição inicial
+    unsigned int start = 2; 
     size_t length = 3; // Comprimento da substring desejada
-
-    // Chamando a função ft_substr
     char *sub = ft_substr(str, start, length);
 
-    if (sub == NULL) {
-        printf("Falha na alocação de memória.\n");
-        return 1;
-    }
-
     printf("Substring: %s\n", sub);
-
-    // Liberando a memória alocada para a substring
-    free(sub);
-
     return 0;
 }
 */

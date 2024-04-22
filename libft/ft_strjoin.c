@@ -15,6 +15,8 @@
 
 #include "libft.h"
 
+/*Concatenate two strings into a new one and
+allocate space for the new string*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	s1len;

@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+/*Trim the beginning and end of the string with the specified characters.*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char		*newstr;
@@ -43,12 +44,9 @@ int	main(void) {
 	// Example usage
 	char const *s1 = "   Hello, World!   ";
 	char const *set = " ";
-
 	printf("Original string: \"%s\"\n", s1);
-
 	// Trim the string
 	char *trimmed = ft_strtrim(s1, set);
-
 	printf("Trimmed string: \"%s\"\n", trimmed);
 	return (0);
 }

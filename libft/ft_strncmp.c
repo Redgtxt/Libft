@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+/*Compares the first n characters of a string*/
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
 	size_t	i;
@@ -31,7 +32,7 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 /*
 int	main(void)
 {
-		// Caso 1: Strings iguais
+	// Caso 1: Strings iguais
 	char str1[] = "Hello";
 	char str2[] = "Hello";
 	printf("Caso 1: %d\n", ft_strncmp(str1, str2, 5));
