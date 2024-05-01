@@ -14,7 +14,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*Fills a memory area with a specific byte */
 void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t			i;

@@ -15,9 +15,7 @@
 
 #include "libft.h"
 
-/*  Converts a string representing a number into an integer.
-	It returns 0 if the string have more than 1 sign
-*/
+/*   Converts a string to an integer.*/
 int	ft_atoi(const char *str)
 {
 	int	i;

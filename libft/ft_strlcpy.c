@@ -15,8 +15,7 @@
 
 #include "libft.h"
 
-/*Copies an n number of characters from
-the source string to the destination.*/
+/* Copies a string to a buffer with a specified size*/
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
@@ -32,3 +31,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
+/*
+int main(void)
+{
+	char src[] = "Bao dia";
+	char dest[50];
+
+	ft_strlcpy(dest, src, sizeof(src));
+
+
+	printf("Conteudo de src: %s\n", src);
+	printf("Conteudo copiado para dest: %s\n", dest);
+
+	return (0);
+}
+*/

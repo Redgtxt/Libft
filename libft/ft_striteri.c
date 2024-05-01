@@ -15,7 +15,8 @@
 
 #include "libft.h"
 
-/*	Iterates through a string, enabling character and index manipulation.*/
+/*	Iterates through a string,
+ enabling character and index manipulation.*/
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;

@@ -14,7 +14,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/* Duplicates a string by dynamically allocating
+memory and copying the original string into it.*/
 char	*ft_strdup(const char *str1)
 {
 	char	*new;
@@ -34,3 +35,16 @@ char	*ft_strdup(const char *str1)
 	new[i] = '\0';
 	return (new);
 }
+/*
+int main(void)
+{
+	char *str = "Bom dia";
+	char *ptr;
+
+	ptr = ft_strdup(str);
+	printf("Original string: %s\n", str);
+	printf("Copied string: %s\n", ptr);
+	free(ptr);
+	return (0);
+}
+*/

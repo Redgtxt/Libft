@@ -14,7 +14,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*Compares two blocks of memory byte by byte.*/
 int	ft_memcmp(void *dest, const void *src, size_t n)
 {
 	size_t				i;
@@ -38,7 +38,7 @@ int	ft_memcmp(void *dest, const void *src, size_t n)
 /*
 int	main(void) {
 	char str1[] = "Hello";
-	char str2[] = "Hellp";
+	char str2[] = "Hello";
 	int result;
 	result = ft_memcmp(str1, str2, 5);
 

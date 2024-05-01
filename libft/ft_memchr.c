@@ -14,7 +14,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*Searches for the first occurrence of a character
+ in a block of memory.*/
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	size_t		i;
@@ -37,7 +38,7 @@ int	main(void) {
 	char str[] = "Hello, world!";
 	char *ptr;
 
-	ptr = ft_memchr(str, 'e',19);
+	ptr = ft_memchr(str, 'l',19);
 
 	printf("%s",ptr);
 	return (0);

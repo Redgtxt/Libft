@@ -14,7 +14,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*Deletes a node of a list*/
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst == NULL || del == NULL)
@@ -22,3 +22,19 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	(*del)(lst->content);
 	free(lst);
 }
+
+/*
+int main(void)
+{
+	t_list *node = ft_lstnew("Hello, world!");
+			
+	printf("Before deletion: %s\n", (char *)node->content);
+
+	// Delete the node
+	ft_lstdelone(node, &free);
+
+	printf("After deletion: %s\n", (char *)node->content);
+
+	return 0;
+}
+*/

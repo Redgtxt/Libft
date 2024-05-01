@@ -37,7 +37,7 @@ int main()
 {
     char str[] = "Cbum";
     unsigned int start = 2; 
-    size_t length = 3; // Comprimento da substring desejada
+    size_t length = 3;
     char *sub = ft_substr(str, start, length);
 
     printf("Substring: %s\n", sub);

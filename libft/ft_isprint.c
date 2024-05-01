@@ -14,7 +14,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*	Checks if is a printable character.*/
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
@@ -23,8 +23,6 @@ int	ft_isprint(int c)
 }
 
 /*
-#include <stdio.h>
-
 int	main(void)
 {
 		printf("%d ", ft_isprint(1));

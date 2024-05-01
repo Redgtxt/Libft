@@ -40,12 +40,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 /*
-int	main(void) {
-	// Example usage
+int	main(void)
+ {
 	char const *s1 = "   Hello, World!   ";
 	char const *set = " ";
 	printf("Original string: \"%s\"\n", s1);
-	// Trim the string
 	char *trimmed = ft_strtrim(s1, set);
 	printf("Trimmed string: \"%s\"\n", trimmed);
 	return (0);

@@ -35,3 +35,19 @@ char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 	newstr[i] = '\0';
 	return (newstr);
 }
+/*
+ void function_f_striteri(unsigned int nr,char *str)
+    {
+        if(str && nr)
+            *str = ft_toupper(*str);
+    }
+
+int main()
+{
+    char str_striteri[10] = "ABCDefgh";
+
+    ft_striteri(str_striteri, function_f_striteri);
+    printf("New: %s", str_striteri);
+    return 0;
+}
+*/

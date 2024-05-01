@@ -31,21 +31,14 @@ char	*ft_strrchr(const char *str, int c)
 		return ((char *)str + i);
 	return (NULL);
 }
-
 /*
-#include <string.h>
-
-int	main(void)
+int main(void)
 {
-	char str[] = "Hello, world!";
+	char str[] = "Bom dia";
 	char *ptr;
-	char *ptrTrue;
 
-	ptr = ft_strrchr(str, 'l');
-	ptrTrue = strrchr(str, 'l');
-
-	printf("Meu: %s\n",ptr);
-	printf("True: %s\n",ptrTrue);
+	ptr = ft_strrchr(str, 'o');
+	printf("Last occurrence of 'o' in the string: %s\n", ptr);
 	return (0);
 }
 */

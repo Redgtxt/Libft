@@ -15,99 +15,92 @@
 
 #include "libft.h"
 
-size_t	count_tokens(char const *s, char delimiter)
+static int	count_words(char const *s, char c)
 {
-	size_t	tokens;
-	size_t	i;
-	int		inside_token;
-
-	inside_token = 0;
-	tokens = 0;
-	i = 0;
-	while (s[i])
-	{
-		inside_token = 0;
-		while (s[i] == delimiter && s[i])
-			i++;
-		while (s[i] != delimiter && s[i])
-		{
-			if (!inside_token)
-			{
-				tokens++;
-				inside_token = 1;
-			}
-			i++;
-		}
-	}
-	return (tokens);
-}
-
-int	safe_malloc(char **tokens_v, int position, size_t buffer)
-{
-	tokens_v[position] = malloc(buffer);
-	if (tokens_v[position] == NULL)
-	{
-		while (position > 0)
-		{
-			free(tokens_v[--position]);
-		}
-		free(tokens_v);
-		return (1);
-	}
-	return (0);
-}
-
-int	fill(char **tokens_v, char const *s, char delimiter)
-{
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	int	start;
+	int	i;
 
 	i = 0;
-	j = 0;
-	while (s[i] != '\0')
+	start = 0;
+	while(*s)
 	{
-		len = 0;
-		while (s[i] == delimiter && s[i])
-			i++;
-		while (s[i] != delimiter && s[i])
+		if(*s != c && start == 0)
 		{
-			len++;
 			i++;
+			start = 1;
 		}
-		if (len)
-		{
-			if (safe_malloc(tokens_v, j, len + 1))
-				return (1);
-			ft_strlcpy(tokens_v[j], &s[i - len], len + 1);
-			j++;
-		}
+		else if(*s == c)
+			start = 0;
+		s++;
 	}
-	return (0);
+	return (i);
+}
+
+static int	word_size(char const *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != c && s[i])
+		i++;
+	return (i);
+}
+
+static char	*build_str(char const *s, unsigned int start, unsigned int end)
+{
+	char	*word;
+	int		i;
+
+	i = 0;
+	word = malloc(((end - start) + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
+	while (start < end)
+	{
+		word[i] = s[start];
+		start++;
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	tokens;
-	char	**tokens_v;
+	char	**str_split;
+	size_t	i;
+	size_t	start;
+	int		word;
 
-	if (s == NULL)
+	start = 0;
+	word = 0;
+	i = 0;
+	str_split = malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!s || !str_split)
 		return (NULL);
-	tokens = count_tokens(s, c);
-	tokens_v = malloc((tokens + 1) * sizeof(char *));
-	if (tokens_v == NULL)
-		return (NULL);
-	tokens_v[tokens] = NULL;
-	if (fill(tokens_v, s, c))
+	while (s[i])
 	{
-		free(tokens_v);
-		return (NULL);
+		if (s[i] == c)
+			i++;
+		else if (s[i] != c)
+		{
+			start = i;
+			i += word_size(&s[i], c);
+			str_split[word] = build_str(s, start, i);
+			word++;
+		}
 	}
-	return (tokens_v);
+	str_split[word] = NULL;
+	return (str_split);
 }
-
 /*
-// Contar as palavras || Tokens
-// Alocar a memória
-// Copiar os tokens para o lugar certo
+int main()
+{
+	char str[] = "Cbum";
+	char **split = ft_split(str, 'u');
+
+	for (int i = 0; split[i]; i++)
+		printf("Split[%d]: %s\n", i, split[i]);
+	return 0;
+}
 */

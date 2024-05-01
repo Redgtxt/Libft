@@ -36,3 +36,14 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[destlen + i] = '\0';
 	return (destlen + srclen);
 }
+/*
+int main(void)
+{
+	char dest[50] = "Bom";
+	char src[50] = "dia";
+
+	printf("Before: %s\n", dest);
+	ft_strlcat(dest, src, 5);
+	printf("After: %s\n", dest);
+}
+*/

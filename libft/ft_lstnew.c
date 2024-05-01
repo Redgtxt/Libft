@@ -14,36 +14,24 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*Creates a new node*/
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*ret;
+	t_list	*node;
 
-	ret = malloc(sizeof(t_list));
-	if (!ret)
+	node = malloc(sizeof(t_list));
+	if (!node)
 		return (NULL);
-	ret->content = content;
-	ret->next = NULL;
-	return (ret);
+	node->content = content;
+	node->next = NULL;
+	return (node);
 }
-
 /*
-int	main(void) {
-	// Cria um novo nó com conteúdo "Hello, world!"
+int	main(void)
+ {
+
 	t_list *node = ft_lstnew("Hello, world!");
-
-	// Verifica se o nó foi criado corretamente
-	if (node != NULL) {
-		// Imprime o conteúdo do nó
-		printf("Content of the node: %s\n", (char *)node->content);
-
-		// Libera a memória alocada para o nó
-		free(node);
-	} else {
-		// Se não foi possível criar o nó, imprime uma mensagem de erro
-		printf("Error: Unable to create the node\n");
-	}
-
+		printf("Content of the node: %s\n", (char *)node->content);	
 	return (0);
 }
 */

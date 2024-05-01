@@ -15,13 +15,6 @@
 
 #include "libft.h"
 
-/*
- n = 123 / 10 = 12| count = 1;
- n = 12 / 10 = 1| count = 2;
- n = 1 / 10 = 0| count = 3;
- returnar (count);
-*/
-
 static int	ft_len(int n)
 {
 	size_t	count;
@@ -37,6 +30,13 @@ static int	ft_len(int n)
 	return (count);
 }
 
+/*
+ n = 123 / 10 = 12| count = 1;
+ n = 12 / 10 = 1| count = 2;
+ n = 1 / 10 = 0| count = 3;
+ returnar (count);
+*/
+
 static void	fill_ptr(char *ptr, unsigned int num, int len)
 {
 	while (num)
@@ -45,11 +45,7 @@ static void	fill_ptr(char *ptr, unsigned int num, int len)
 		num /= 10;
 	}
 }
-
-/*
- E unsigned int para nao estourar o buffer
-  com o numero minimo do INT
-*/
+/* converts an integer into a string representation*/
 char	*ft_itoa(int n)
 {
 	char			*ptr;
@@ -76,3 +72,15 @@ char	*ft_itoa(int n)
 	fill_ptr(ptr, num, len);
 	return (ptr);
 }
+
+
+
+/*
+int main(void)
+{
+	 printf("TESTING FT_ITOA \n\n");
+    printf("123 --> %s\n", ft_itoa(464));
+    printf("0 --> %s\n", ft_itoa(0));
+    printf("-123 --> %s\n\n", ft_itoa(-123));
+}
+*/
