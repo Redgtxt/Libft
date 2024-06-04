@@ -16,7 +16,7 @@
 #include "libft.h"
 
 /*	Create a new string by modifying the string with a specified function.*/
-char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int		i;
 	char				*newstr;
@@ -35,19 +35,17 @@ char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 	newstr[i] = '\0';
 	return (newstr);
 }
-/*
- void function_f_striteri(unsigned int nr,char *str)
+/* char function_f_mapi(unsigned int i, char c)
     {
-        if(str && nr)
-            *str = ft_toupper(*str);
+        (void)i;
+        return(c + 1);
     }
-
 int main()
 {
-    char str_striteri[10] = "ABCDefgh";
-
-    ft_striteri(str_striteri, function_f_striteri);
-    printf("New: %s", str_striteri);
-    return 0;
+    char *str_strmapi = "AbCd";
+    char *result_strmapi = ft_strmapi(str_strmapi, function_f_mapi);
+    printf("Origial: %s\n", str_strmapi);
+    printf("New: %s\n", result_strmapi);
+    free(result_strmapi);
 }
-*/
+ */

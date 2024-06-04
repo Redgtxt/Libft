@@ -45,6 +45,7 @@ static void	fill_ptr(char *ptr, unsigned int num, int len)
 		num /= 10;
 	}
 }
+
 /* converts an integer into a string representation*/
 char	*ft_itoa(int n)
 {
@@ -72,14 +73,11 @@ char	*ft_itoa(int n)
 	fill_ptr(ptr, num, len);
 	return (ptr);
 }
-
-
-
 /*
 int main(void)
 {
 	 printf("TESTING FT_ITOA \n\n");
-    printf("123 --> %s\n", ft_itoa(464));
+    printf("123 --> %s\n", ft_itoa(123));
     printf("0 --> %s\n", ft_itoa(0));
     printf("-123 --> %s\n\n", ft_itoa(-123));
 }

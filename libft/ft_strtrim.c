@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int	main(void)
  {
-	char const *s1 = "   Hello, World!   ";
+	char const *s1 = "   Hello,World!   ";
 	char const *set = " ";
 	printf("Original string: \"%s\"\n", s1);
 	char *trimmed = ft_strtrim(s1, set);

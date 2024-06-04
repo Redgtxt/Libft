@@ -22,14 +22,14 @@ static int	count_words(char const *s, char c)
 
 	i = 0;
 	start = 0;
-	while(*s)
+	while (*s)
 	{
-		if(*s != c && start == 0)
+		if (*s != c && start == 0)
 		{
 			i++;
 			start = 1;
 		}
-		else if(*s == c)
+		else if (*s == c)
 			start = 0;
 		s++;
 	}
