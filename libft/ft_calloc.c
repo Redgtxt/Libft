@@ -14,17 +14,18 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <limits.h>
 
-/*returns a pointer to the allocated memory*/
-
-void	*ft_calloc(size_t n, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	ptr = malloc(n * size);
+	if (nmemb && size > UINT_MAX / size)
+		return (NULL);
+	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);
-	ft_bzero(ptr, n * size);
+	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
 /*
