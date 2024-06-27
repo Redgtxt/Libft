@@ -16,6 +16,13 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+#include <limits.h>
+# include <fcntl.h>
+#include <stdarg.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
 
 //Libc Functions
 int		ft_isalpha(int c);
@@ -71,5 +78,20 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//ft_printf
+int	ft_putchar_printf(char c);
+int	ft_putstr_printf(char *s);
+int	printbase(long nbr, int base, char *symbols);
+int	ft_putptr_base(unsigned long long ptr, char *base, int f);
+int	ft_conversions(char format, va_list args);
+int	ft_printf(const char *str, ...);
+
+//Get_next_line
+char	*ft_strjoin_gnl(char *s1, char const *s2);
+size_t	ft_strlen_gnl(const char *s);
+int		flagfunc(char *buffer);
+char	*get_next_line(int fd);
+
 
 #endif
